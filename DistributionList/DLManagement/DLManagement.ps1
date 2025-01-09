@@ -1,11 +1,16 @@
-# Connect to Exchange Online
-connect-ExchangeOnline -Credential $credential
+param (
+    [Parameter(Mandatory = $true)]
+    [pscredential]$Credential,
 
-# Specify the path to the input CSV file
-$csvPath = "C:\Path\To\Your\CSV\File.csv"
+    [Parameter(Mandatory = $true)]
+    [string]$CSVPath
+)
+
+# Connect to Exchange Online
+Connect-ExchangeOnline -Credential $Credential
 
 # Import the DL details from the CSV file
-$dlDetails = Import-Csv -Path $csvPath
+$dlDetails = Import-Csv -Path $CSVPath
 
 # Iterate through each DL in the CSV file and create or delete the DL
 foreach ($dl in $dlDetails) {

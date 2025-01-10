@@ -36,7 +36,3 @@ The script will connect to Exchange Online and add each user listed in the CSV f
 - It is recommended to run this script in a development or testing environment before using it in production.
 - Ensure that the credentials used have the necessary permissions to manage the shared mailbox in Exchange Online.
 - The script can be further customized based on specific needs.
-
----
-
-If you need any further adjustments or have any questions, feel free to ask!
